@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 const db = require('./db');     // import from exports and also to establish connection befre the establishment of https connection
+require('dotenv').config();
+const PORT = process.env.PORT || 3000;
 
 // bodyParser is a middleware in Express.js
 // It used to parse and extract the body of incoming HTTP requestes 
@@ -22,7 +24,6 @@ const menuItemRoutes = require('./routes/MenuItemRoutes');
 app.use('/person', personRoutes);
 app.use('/menu', menuItemRoutes);
 
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`)
 })
