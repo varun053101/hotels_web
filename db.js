@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // Define the MongoDB connection URL
-// const mongoURL = process.env.MONGODB_URL_LOCAL;   // Automatically creats a new database if not already present
-const mongoURL = process.env.MONGODB_URL;
+const mongoURL = process.env.MONGODB_URL_LOCAL;   // Automatically creats a new database if not already present
+// const mongoURL = process.env.MONGODB_URL;
 mongoose.connect(mongoURL);             // Represent that the url that we are working is new with latest mongodb version
 
 // mongoose.connect(mongoURL, {
